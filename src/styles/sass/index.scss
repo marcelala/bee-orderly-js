@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap");
+//abstracts
+@import "_abstracts/_variables";
+@import "_abstracts/_mixins";
+@import "base/_typography";
+@import "base/_base";
+@import "layout/_template";
+
+//components
+@import "components/header";
+@import "components/welcome";
+@import "components/buttons";
+@import "components/form";
+@import "components/sorter";
+@import "components/list";
+@import "components/item";
