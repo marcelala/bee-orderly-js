@@ -9,19 +9,13 @@ export const ListContext = createContext({
   dispatch: () => undefined,
 });
 
-export function ListContextProvider({ children }) {
-  const [list, dispatch] = useReducer(ListReducer, []);
-  const contextValue = { list, dispatch };
+let loadedList = [];
+const json = localStorage.getItem("localList");
+json ? (loadedList = JSON.parse(json)) : (loadedList = []);
 
-  //load list from local storage
-  useEffect(() => {
-    const json = localStorage.getItem("localList");
-    const loadedList = JSON.parse(json);
-    dispatch({
-      type: SET_LIST,
-      payload: loadedList,
-    });
-  }, []);
+export function ListContextProvider({ children }) {
+  const [list, dispatch] = useReducer(ListReducer, loadedList);
+  const contextValue = { list, dispatch };
 
   //save to local storage when the list's state changes
   useEffect(() => {
