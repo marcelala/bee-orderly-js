@@ -1,0 +1,76 @@
+@import "../_abstracts/_variables";
+@import "../_abstracts/_mixins";
+
+.taskCreator{
+	display: flex;
+	flex-direction: column;
+}
+
+.taskCreator-form {
+	font-family: "Noto Sans", sans-serif;
+	font-size: $small-font-size;
+	line-height: 1.5;
+	font-weight: 300;
+	justify-items: center;
+	margin: auto;
+
+	.form {
+		margin: auto;
+		display: grid;
+		grid-gap: 0.5rem;
+		grid-template-areas:
+			"inputName"
+			"inputPrice "
+			"submit";
+	}
+	.alert{
+		font-size: $tiny-font-size;
+		padding: 0rem 1.3rem;
+		margin-bottom: 0.3rem;
+		color: $ikea-blue;
+	}
+	h2 {
+		font-size: $small-font-size;
+		color: $black;
+		padding: 0.5rem 3rem;
+		text-align: initial;
+		font-weight: 300;
+	}
+	& input {
+		background-color: $neutral-gray;
+		border: 2px solid transparent;
+		border-radius: 40em;
+		outline: 0;
+		font-size: 1.2rem;
+		padding: 0.6rem;
+		padding-left: 1.5rem;
+		padding-right: 1.5rem;
+		text-size-adjust: 100%;
+		margin: 0.2rem;
+		&:focus {
+			background-color: $white;
+			border-color: $ikea-blue;
+			color: $dark-gray;
+			transition: transform 350ms ease-in-out;
+		}
+	}
+	.btn-form {
+		margin: 1rem;
+		grid-area: submit;
+		justify-self: center;
+	}
+	label{
+		color: $dark-gray;
+		font-weight: $bold;
+		font-size: $small-font-size;
+		display: inline-flex;
+		flex-direction: column;
+	.input-name {
+		grid-area: inputName;
+	}
+	.input-price {
+		grid-area: inputPrice;
+
+	}
+}
+}

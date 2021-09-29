@@ -1,0 +1,611 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap");
+/* MEDIA QUERY BREAKPOINTS
+    0-576px for portrait phones.
+    577-768px for tablets in portrait mode.
+    769-991 for tablets in landcape mode.
+    992-1200px for laptops.
+    1200px+ for large devices.
+
+
+*/
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap");
+@font-face {
+  font-family: "Noto Sans";
+  src: "../../assets/fonts/NotoSans-Regular.ttf";
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Noto Sans bold";
+  src: "../../assets/fonts/NotoSans-Bold.ttf";
+  font-weight: bold;
+  font-style: normal;
+}
+/* MEDIA QUERY BREAKPOINTS
+    0-576px for portrait phones.
+    577-768px for tablets in portrait mode.
+    769-991 for tablets in landcape mode.
+    992-1200px for laptops.
+    1200px+ for large devices.
+
+
+*/
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Noto Sans", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+article,
+nav,
+section {
+  display: block;
+}
+
+@media only screen and (max-width: 48em) {
+  body {
+    padding: 0;
+  }
+}
+
+section {
+  padding: 2rem 0;
+}
+@media only screen and (max-width: 48em) {
+  section {
+    padding: 1rem 0;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* MEDIA QUERY BREAKPOINTS
+    0-576px for portrait phones.
+    577-768px for tablets in portrait mode.
+    769-991 for tablets in landcape mode.
+    992-1200px for laptops.
+    1200px+ for large devices.
+
+
+*/
+.App {
+  display: grid;
+  grid: auto-flow min-content/1fr;
+  grid-gap: 1rem;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  align-items: center;
+  grid-template-areas: "header" "welcome" "listScreen" "footer";
+}
+
+header {
+  grid-area: header;
+}
+
+footer {
+  grid-area: footer;
+  font-weight: normal;
+  color: #484848;
+  margin-top: 2rem;
+}
+
+.welcome {
+  grid-area: welcome;
+  justify-self: center;
+}
+
+.list-screen {
+  grid-area: listScreen;
+  display: grid;
+  grid-template-areas: "taskCreator" "sorter" "pendingList" "buttonToggleList" "checkedOffList";
+}
+.list-screen .taskCreator {
+  grid-area: taskCreator;
+}
+.list-screen .sorter {
+  grid-area: sorter;
+}
+.list-screen .pending-list {
+  grid-area: pendingList;
+}
+.list-screen .button-toggle-list {
+  grid-area: buttonToggleList;
+}
+.list-screen .checked-off-list {
+  grid-area: checkedOffList;
+}
+
+/* MEDIA QUERY BREAKPOINTS
+    0-576px for portrait phones.
+    577-768px for tablets in portrait mode.
+    769-991 for tablets in landcape mode.
+    992-1200px for laptops.
+    1200px+ for large devices.
+
+
+*/
+.header {
+  line-height: 1.3;
+  width: 90%;
+  margin: 0;
+  padding: 0;
+}
+.header .title {
+  margin: auto;
+  float: center;
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+.header h2 {
+  font-size: 1.6rem;
+  padding: 0.3rem 2rem;
+  text-align: center;
+  color: #0058a3;
+  justify-items: center;
+  text-transform: uppercase;
+}
+.header .h2-2 {
+  text-transform: uppercase;
+}
+
+.logo {
+  padding-top: 1rem;
+  margin: 1rem;
+  margin-bottom: 1rem;
+  float: left;
+  width: 100%;
+}
+.logo img {
+  height: 100%;
+  width: 8rem;
+}
+
+/* MEDIA QUERY BREAKPOINTS
+    0-576px for portrait phones.
+    577-768px for tablets in portrait mode.
+    769-991 for tablets in landcape mode.
+    992-1200px for laptops.
+    1200px+ for large devices.
+
+
+*/
+.welcome {
+  display: grid;
+  grid-template-rows: repeat(3, min-content);
+  justify-items: center;
+  font-family: "NotoSans-Regular";
+  line-height: 1.5;
+  max-width: 38rem;
+  padding-top: 0;
+}
+.welcome .welcome-wrapper {
+  max-width: 90%;
+}
+.welcome .attribution {
+  font-size: 0.5rem;
+  font-family: "NotoSans-Regular";
+  color: #484848;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.welcome img {
+  object-fit: cover;
+  max-height: 22rem;
+  height: 100%;
+  width: 9rem;
+}
+.welcome h3 {
+  font-size: 1rem;
+  padding: 0.5rem 3rem;
+  text-align: center;
+  color: #0058a3;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.welcome h4 {
+  font-weight: 300;
+  padding: 0.5rem 3rem;
+  text-justify: distribute-all-lines;
+  text-indent: 1.5rem;
+  text-align: justify;
+}
+
+h5 {
+  font-weight: 400;
+  color: #484848;
+  font-size: 1rem;
+  line-height: 1.5;
+  width: 90%;
+  text-align: center;
+}
+
+/* MEDIA QUERY BREAKPOINTS
+    0-576px for portrait phones.
+    577-768px for tablets in portrait mode.
+    769-991 for tablets in landcape mode.
+    992-1200px for laptops.
+    1200px+ for large devices.
+
+
+*/
+.btn {
+  font-size: 1rem;
+  position: relative;
+  text-decoration: none;
+  border: 0;
+  font-weight: 700;
+  line-height: 1.4;
+  padding: 0.5rem 2.3rem;
+  background-color: #0058a3;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  box-shadow: 0em 0.3em 0.5em 0em rgba(0, 0, 0, 0.2);
+  transition: transform 250ms ease-in-out;
+  position: relative;
+  border-radius: 2rem;
+}
+.btn::after {
+  content: "";
+  position: absolute;
+  box-shadow: 0em 0em 1.25em 0em rgba(0, 0, 0, 0.4);
+  transition: transform 250ms ease-in-out;
+  opacity: 0;
+}
+.btn:hover, .btn:focus {
+  transform: scale(1.1);
+}
+.btn:hover::after, .btn:focus::after {
+  opacity: 1;
+}
+
+.taskCreator-button-wrapper {
+  margin: 1.5rem auto;
+  justify-items: center;
+}
+
+.btn-sort {
+  color: #0058a3;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2rem;
+}
+.btn-sort:hover {
+  background-color: #ccc;
+}
+.btn-sort label {
+  border: 1px solid #0058a3;
+  cursor: pointer;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  border-radius: 50em;
+  height: 2.5rem;
+  line-height: 1.4;
+  padding: 0.5rem 2.3rem;
+  font-weight: 700;
+  font-size: 0.75rem;
+}
+.btn-sort label input[type=checkbox] {
+  display: none;
+}
+
+.icon-button {
+  background-color: transparent;
+  color: #0058a3;
+  transition: transform 250ms ease-in-out;
+  border: 0;
+  display: inline-flex;
+  box-shadow: 0em 0.3em 0.5em 0em rgba(0, 0, 0, 0.2);
+  transition: transform 250ms ease-in-out;
+  position: relative;
+  border: none;
+  box-shadow: 0 0 0 0;
+}
+.icon-button::after {
+  content: "";
+  position: absolute;
+  box-shadow: 0em 0em 1.25em 0em rgba(0, 0, 0, 0.4);
+  transition: transform 250ms ease-in-out;
+  opacity: 0;
+}
+.icon-button:hover, .icon-button:focus {
+  transform: scale(1.1);
+}
+.icon-button:hover::after, .icon-button:focus::after {
+  opacity: 1;
+}
+.icon-button .icon {
+  margin-left: 0.3rem;
+  height: 2.2rem;
+  width: 2.2rem;
+  filter: invert(15%) sepia(97%) saturate(2968%) hue-rotate(195deg) brightness(103%) contrast(100%);
+}
+.icon-button .bin {
+  height: 1.5rem;
+  width: 1.5rem;
+  filter: invert(15%) sepia(97%) saturate(28%) hue-rotate(195deg) brightness(203%) contrast(100%);
+}
+.icon-button .bin:hover {
+  filter: invert(15%) sepia(97%) saturate(2968%) hue-rotate(195deg) brightness(103%) contrast(100%);
+}
+
+/* MEDIA QUERY BREAKPOINTS
+    0-576px for portrait phones.
+    577-768px for tablets in portrait mode.
+    769-991 for tablets in landcape mode.
+    992-1200px for laptops.
+    1200px+ for large devices.
+
+
+*/
+.taskCreator {
+  display: flex;
+  flex-direction: column;
+}
+
+.taskCreator-form {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 300;
+  justify-items: center;
+  margin: auto;
+}
+.taskCreator-form .form {
+  margin: auto;
+  display: grid;
+  grid-gap: 0.5rem;
+  grid-template-areas: "inputName" "alert1" "inputPrice " "alert2" "submit";
+}
+.taskCreator-form .alert-1 {
+  grid-area: alert1;
+}
+.taskCreator-form .alert-2 {
+  grid-area: alert2;
+}
+.taskCreator-form .alert-1,
+.taskCreator-form .alert-2 {
+  font-size: 0.7rem;
+  padding: 0rem 1.3rem;
+  margin-bottom: 0.3rem;
+  color: #0058a3;
+}
+.taskCreator-form h2 {
+  font-size: 1rem;
+  color: #111;
+  padding: 0.5rem 3rem;
+  text-align: initial;
+  font-weight: 300;
+}
+.taskCreator-form input {
+  background-color: whitesmoke;
+  border: 2px solid transparent;
+  border-radius: 40em;
+  outline: 0;
+  font-size: 1.2rem;
+  padding: 0.6rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  text-size-adjust: 100%;
+  margin: 0.2rem;
+}
+.taskCreator-form input:focus {
+  background-color: #fff;
+  border-color: #0058a3;
+  color: #484848;
+  transition: transform 350ms ease-in-out;
+}
+.taskCreator-form .btn-form {
+  margin: 1rem;
+  grid-area: submit;
+  justify-self: center;
+}
+.taskCreator-form label {
+  color: #484848;
+  font-weight: 700;
+  font-size: 1rem;
+  display: inline-flex;
+  flex-direction: column;
+}
+.taskCreator-form label .input-name {
+  grid-area: inputName;
+}
+.taskCreator-form label .input-price {
+  grid-area: inputPrice;
+}
+
+/* MEDIA QUERY BREAKPOINTS
+    0-576px for portrait phones.
+    577-768px for tablets in portrait mode.
+    769-991 for tablets in landcape mode.
+    992-1200px for laptops.
+    1200px+ for large devices.
+
+
+*/
+.sorter-controls {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  padding: 0;
+}
+.sorter-controls h4 {
+  font-weight: bold;
+  margin: 0 0.8rem;
+  color: #0058a3;
+}
+.sorter-controls .btn-sort {
+  margin: 0 0.8rem;
+}
+
+/* MEDIA QUERY BREAKPOINTS
+    0-576px for portrait phones.
+    577-768px for tablets in portrait mode.
+    769-991 for tablets in landcape mode.
+    992-1200px for laptops.
+    1200px+ for large devices.
+
+
+*/
+.shopping-list {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.shopping-list h2 {
+  font-size: 1rem;
+  text-align: center;
+}
+.shopping-list .button-wrapper {
+  margin: 2rem 0;
+  display: flex;
+  justify-content: center;
+}
+.shopping-list h3 {
+  float: left;
+  font-size: 1rem;
+  padding: 0;
+  align-self: center;
+}
+
+.complete-list .item {
+  border-bottom: 1px solid #ccc;
+}
+.complete-list .itemName,
+.complete-list .itemPrice,
+.complete-list .itemQuantity {
+  color: gray;
+}
+.complete-list .image-wrapper {
+  position: relative;
+}
+.complete-list .image-wrapper span {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  background-position: center;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.complete-list .status {
+  opacity: 0.6;
+  filter: invert(40%) sepia(90%) saturate(995%) hue-rotate(343deg) brightness(160%) contrast(97%);
+}
+
+/* MEDIA QUERY BREAKPOINTS
+    0-576px for portrait phones.
+    577-768px for tablets in portrait mode.
+    769-991 for tablets in landcape mode.
+    992-1200px for laptops.
+    1200px+ for large devices.
+
+
+*/
+.item {
+  display: grid;
+  grid-template-columns: min-content 1fr min-content;
+  font-size: 0.75rem;
+  opacity: 1;
+  width: 100%;
+  transition: opacity 0.8s, max-height 0s;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid #efce15;
+  justify-content: center;
+  align-items: center;
+  grid-template-areas: "checkbox details image" "checkbox details image" "checkbox quantity optionals";
+}
+.item img {
+  width: 3.7rem;
+  height: 3.5rem;
+  padding: 0.3rem;
+  filter: invert(15%) sepia(97%) saturate(2968%) hue-rotate(195deg) brightness(103%) contrast(100%);
+}
+.item .image-wrapper {
+  grid-area: image;
+  border-radius: 50%;
+  border: 2px solid #0058a3;
+}
+.item .image-wrapper:hover {
+  background-color: whitesmoke;
+}
+
+.item-details {
+  overflow-wrap: break-word;
+  margin: auto;
+  padding: 0 0.7rem;
+  display: block;
+  grid-area: details;
+}
+
+.itemName {
+  color: #111;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  font-weight: 700;
+  display: block;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.itemPrice {
+  font-size: 1.2rem;
+  font-weight: bold;
+  line-height: 1;
+  color: #111;
+  display: block;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.bin-wrapper {
+  grid-area: optionals;
+  text-align: center;
+}
+
+.itemQuantity {
+  color: #484848;
+  grid-area: quantity;
+  margin: auto;
+  padding: 0rem;
+  align-content: flex-start;
+  text-align: center;
+}
+
+.checkbox-wrapper {
+  grid-area: checkbox;
+  margin: auto;
+  transition: all 0.5s ease;
+}
+.checkbox-wrapper input[type=checkbox] {
+  display: inline-block;
+  width: 1.75rem;
+  height: 1.75rem;
+  cursor: pointer;
+  font-size: 0.7rem;
+  transition: transform 500ms ease-in-out;
+}
+
+/*# sourceMappingURL=index.css.map */
