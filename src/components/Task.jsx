@@ -1,8 +1,8 @@
 //npm packages
 import React from "react";
 //project files
-import { useList } from "../context/ListContext";
 import Checkbox from "./Checkbox";
+import { useList } from "../context/ContextHook";
 
 export default function Task({ task }) {
   //constants
@@ -16,7 +16,7 @@ export default function Task({ task }) {
         onChange={() =>
           dispatch({
             type: "UPDATE_TASK",
-            payload: { task },
+            payload: task,
           })
         }
       />

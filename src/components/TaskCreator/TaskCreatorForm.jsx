@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 //project files
-import { useList } from "../../context/ListContext";
 import InputField from "./InputField";
 import { validateForm } from "./FormValidation";
-import { UPDATE_LIST } from "../../context/ListActions";
+import { useList } from "../../context/ContextHook";
 
 const emptyForm = { name: "", price: "" };
 
@@ -25,7 +24,7 @@ export default function TaskCreatorForm({ toggleForm }) {
     event.preventDefault();
     //if (isValid) {
     dispatch({
-      type: UPDATE_LIST,
+      type: "UPDATE_LIST",
       payload: {
         id: Date.now(),
         name: input.name.toUpperCase().trim(),
