@@ -1,7 +1,8 @@
-import { render, screen, fireEvent } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
+import { renderHook, act } from "@testing-library/react-hooks";
 import App from "./App";
 import { ListContextProvider } from "./context/list/ListContext";
-
+import { useList } from "./context/list/ContextHook";
 /**
  * 3 As of Testing
  * Arrange:
@@ -27,5 +28,25 @@ test("Should show the welcome screen if the list is empty", () => {
     </ListContextProvider>
   );
   const textElement = screen.getByText(/EIKA's shopping list/i);
+  expect(textElement).toBeInTheDocument();
+});
+
+test("Should show the list screen if the list is not empty", () => {
+  // Arrange
+  const mockTask = {
+    id: 0,
+    name: "Flisat",
+    price: 1220,
+    isCheckedOff: false,
+  };
+  const mockData = [{ mockTask }];
+  Storage.prototype.getItem = jest.fn(() => JSON.stringify(mockData));
+  const { list: loadedList } = renderHook(() => useList());
+  render(
+    <ListContextProvider>
+      <App />
+    </ListContextProvider>
+  );
+  const textElement = screen.getByText(/welcome/i);
   expect(textElement).toBeInTheDocument();
 });
