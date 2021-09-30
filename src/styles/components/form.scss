@@ -10,12 +10,12 @@
 	line-height: 1.5;
 	font-weight: 300;
 	justify-items: center;
-	margin: auto;
+	margin-top: $space-medium;
 
 	.form {
-		margin: auto;
+		margin: $space-small auto;
 		display: grid;
-		grid-gap: 0.5rem;
+		row-gap: $space-medium;
 		grid-template-areas:
 			"inputName"
 			"inputPrice "
@@ -40,11 +40,8 @@
 		border-radius: 40em;
 		outline: 0;
 		font-size: 1.2rem;
-		padding: 0.6rem;
-		padding-left: 1.5rem;
-		padding-right: 1.5rem;
-		text-size-adjust: 100%;
-		margin: 0.2rem;
+		padding: $space-small $space-medium;
+		margin-top: $space-small;
 		&:focus {
 			background-color: $white;
 			border-color: $ikea-blue;
@@ -68,7 +65,6 @@
 	}
 	.input-price {
 		grid-area: inputPrice;
-
 	}
 }
 }

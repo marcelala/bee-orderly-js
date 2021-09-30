@@ -12,12 +12,10 @@ export default function WelcomeScreen() {
         alt="bohemian house furniture and cactus"
       />
       <div className="welcome-wrapper">
-        <blockquote className="attribution">
-          <p>
-            Photo by
-            <a href="https://unsplash.com/"> Unsplash </a>
-          </p>
-        </blockquote>
+        <p className="attribution">
+          Photo by
+          <a href="https://unsplash.com/"> Unsplash </a>
+        </p>
         <h3> Welcome! We’re so glad you’re here! </h3>
         <h4>
           You can use our shopping list to help you plan before you visit us.

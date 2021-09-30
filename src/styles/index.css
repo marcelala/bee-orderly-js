@@ -162,10 +162,10 @@ footer {
   justify-items: center;
   line-height: 1.5;
   max-width: 38rem;
-  padding-top: 0;
 }
 .welcome .welcome-wrapper {
   max-width: 90%;
+  padding: 1rem 0;
 }
 .welcome .attribution {
   font-size: 0.5rem;
@@ -193,6 +193,7 @@ footer {
   text-justify: distribute-all-lines;
   text-indent: 1.5rem;
   text-align: justify;
+  color: gray;
 }
 
 .btn {
@@ -224,6 +225,10 @@ footer {
 }
 .btn:hover::after, .btn:focus::after {
   opacity: 1;
+}
+
+.btn-taskCreator {
+  margin: 0 auto;
 }
 
 .btn-sort {
@@ -296,12 +301,12 @@ footer {
   line-height: 1.5;
   font-weight: 300;
   justify-items: center;
-  margin: auto;
+  margin-top: 1.5rem;
 }
 .taskCreator-form .form {
-  margin: auto;
+  margin: 1rem auto;
   display: grid;
-  grid-gap: 0.5rem;
+  row-gap: 1.5rem;
   grid-template-areas: "inputName" "inputPrice " "submit";
 }
 .taskCreator-form .alert {
@@ -323,11 +328,8 @@ footer {
   border-radius: 40em;
   outline: 0;
   font-size: 1.2rem;
-  padding: 0.6rem;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-  text-size-adjust: 100%;
-  margin: 0.2rem;
+  padding: 1rem 1.5rem;
+  margin-top: 1rem;
 }
 .taskCreator-form input:focus {
   background-color: #fff;
@@ -416,9 +418,6 @@ footer {
 }
 .list-screen .checked-off-list {
   grid-area: checkedOffList;
-}
-.list-screen .btn-taskCreator {
-  margin: 0 auto;
 }
 .list-screen .pending-list {
   margin: 0 auto;

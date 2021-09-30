@@ -5,9 +5,9 @@
 	justify-items: center;
 	line-height: 1.5;
 	max-width: 38rem;
-	padding-top: 0;
 	.welcome-wrapper {
 		max-width: 90%;
+		padding: $space-small 0;
 	}
 
 	.attribution {
@@ -37,5 +37,6 @@
 		text-justify: distribute-all-lines;
 		text-indent: 1.5rem;
 		text-align: justify;
+		color: gray;
 	}
 }
