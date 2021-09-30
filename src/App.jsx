@@ -3,7 +3,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ListScreen from "./screens/ListScreen";
 import WelcomeScreen from "./screens/WelcomeScreen";
-import { useList } from "./context/ContextHook";
+import { useList } from "./context/list/ContextHook";
 
 export default function App() {
   const { list } = useList();

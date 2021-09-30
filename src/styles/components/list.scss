@@ -1,0 +1,81 @@
+//layout
+.list-screen {
+	width: 80%;
+	@include respond(big-desktop);
+	justify-content: center;
+	justify-items: center;
+	margin: auto;
+	grid-area: listScreen;
+	display: grid;
+	row-gap: $space-medium;
+	grid-template-areas:
+	"text"
+	"taskCreator"
+	"sorter"
+	"pendingList"
+	"buttonToggleList"
+	"checkedOffList";
+
+	.text-box {
+		grid-area: text;
+		margin: 0 auto;
+		padding: $space-small;
+		width: 100%;
+		text-align: center;
+
+		h5 {
+			font-weight: 700;
+			color: $ikea-blue;
+			font-size: $small-font-size;
+		}
+		p{
+			color: gray;
+		}
+	}
+
+	.taskCreator {
+		grid-area: taskCreator;
+	}
+
+	.sorter {
+		grid-area: sorter;
+	}
+
+	.pending-list {
+		grid-area: pendingList;
+	}
+
+	.toggle {
+		grid-area: buttonToggleList;
+		margin: 0 auto;
+	}
+
+	.checked-off-list {
+		grid-area: checkedOffList;
+	}
+
+	.btn-taskCreator {
+		margin: 0 auto;
+	}
+
+	.pending-list {
+		margin: 0 auto;
+		width: 80%;
+	}
+
+	.checked-off-list {
+		margin: 0 auto;
+		.task {
+			border-bottom: 1px solid $light-gray;
+
+			.name, .price {
+				color: gray;
+			}
+		}
+
+		.status {
+			opacity: 0.6;
+			filter: invert(40%) sepia(90%) saturate(995%) hue-rotate(343deg) brightness(160%) contrast(97%);
+		}
+	}
+}

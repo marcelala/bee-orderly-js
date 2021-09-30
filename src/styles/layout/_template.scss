@@ -1,0 +1,32 @@
+
+.App {
+	display: grid;
+	grid: auto-flow min-content / 1fr;
+	grid-gap: 1rem;
+	justify-content: center;
+	align-content: center;
+	justify-items: center;
+	align-items: center;
+	grid-template-areas:
+		"header"
+		"welcome"
+		"listScreen"
+		"footer";
+}
+
+header {
+	grid-area: header;
+}
+
+footer {
+	grid-area: footer;
+	font-weight: normal;
+	color: $dark-gray;
+	margin-top: 2rem;
+}
+
+.welcome {
+	grid-area: welcome;
+	justify-self: center;
+}
+

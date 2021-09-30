@@ -1,0 +1,24 @@
+
+.sorter {
+	display: grid;
+	height: 100%;
+	align-items: center;
+	column-gap: $space-small;
+	grid-template-areas:
+	"title byName byPrice";
+	font-size: $small-font-size;
+	margin: 0 auto;
+	width: 100%;
+	justify-content: center;
+	.sort-label {
+		grid-area: title;
+		color: $ikea-blue;
+	}
+	.byPrice{
+		grid-area: byName;
+	}
+	.byPrice{
+		grid-area: byPrice;
+	}
+
+}

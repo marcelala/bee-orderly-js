@@ -2,11 +2,11 @@ import React, { useState } from "react";
 //project files
 import InputField from "./InputField";
 import { validateForm } from "./FormValidation";
-import { useList } from "../../context/ContextHook";
+import { useList } from "../../context/list/ContextHook";
 
 const emptyForm = { name: "", price: "" };
 
-export default function TaskCreatorForm({ toggleForm }) {
+export default function TaskCreatorForm({ setToggleForm }) {
   const { dispatch } = useList();
   const [input, setInput] = useState(emptyForm);
   const errors = validateForm(input);
@@ -33,6 +33,7 @@ export default function TaskCreatorForm({ toggleForm }) {
       },
     });
     setInput(emptyForm);
+    setToggleForm();
     // }
   }
   return (

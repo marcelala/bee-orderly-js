@@ -14,3 +14,16 @@ $black: #111;
 $light-gray: #ccc;
 $dark-gray: #484848;
 $neutral-gray: rgb(245, 245, 245);
+
+//SPACE VARIABLES
+$space-x-small: .5rem;
+$space-small: 1rem;
+$space-medium: 1.5rem;
+$space-large: 2rem;
+$space-x-large: 4rem;
+
+  // Media queries
+$media-phablet: 400px;
+$media-tablet: 550px;
+$media-desktop: 1000px;
+$media-ultra-wide: 2000px;

@@ -1,8 +1,7 @@
-@import '../_abstracts/_variables';
-@import '../_abstracts/_mixins';
 
 .btn {
 	font-size: 1rem;
+	font-weight: 700;
 	position: relative;
 	text-decoration: none;
 	border: 0;
@@ -16,16 +15,8 @@
 	border-radius: 2rem;
 }
 
-.taskCreator-button-wrapper{
-	margin: 1.5rem auto;
-	justify-items: center;
-}
-
 .btn-sort {
 	color: $ikea-blue;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
 	border-radius: 2rem;
 	&:hover {
 		background-color: $light-gray;
@@ -34,12 +25,8 @@
 		border: 1px solid $ikea-blue;
 		cursor: pointer;
 		height: 100%;
-		display: flex;
-		align-items: center;
-		border-radius: 50em;
-		height: 2.5rem;
-		line-height: 1.4;
-		padding: 0.5rem 2.3rem;
+		border-radius: 1rem;
+		padding: $space-x-small $space-medium	;
 		font-weight: $bold;
 		font-size: 0.75rem;
 		input[type='checkbox'] {
@@ -50,9 +37,8 @@
 .icon-button {
 	background-color: transparent;
 	color: $ikea-blue;
-	transition: transform 250ms ease-in-out;
-	border: 0;
 	display: inline-flex;
+	align-items: center;
 	@include hover-lift;
 	border: none;
 	box-shadow: 0 0 0 0;
