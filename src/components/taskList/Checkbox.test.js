@@ -12,15 +12,17 @@ test("Should fire an event on change", async () => {
 });
 
 test("Should be checked when status is true", async () => {
+  const mockStatus = true;
   const mockMethod = jest.fn();
-  render(<Checkbox checked={true} onChange={mockMethod} />);
+  render(<Checkbox checked={mockStatus} onChange={mockMethod} />);
   const inputCheckboxElement = screen.getByTestId("checkbox");
   expect(inputCheckboxElement.checked).toBe(true);
 });
 
 test("Should not be checked when status is false", async () => {
+  const mockStatus = false;
   const mockMethod = jest.fn();
-  render(<Checkbox checked={false} onChange={mockMethod} />);
+  render(<Checkbox checked={mockStatus} onChange={mockMethod} />);
   const inputCheckboxElement = screen.getByTestId("checkbox");
   expect(inputCheckboxElement.checked).toBe(false);
 });
