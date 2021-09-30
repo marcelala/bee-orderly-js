@@ -2,7 +2,7 @@
 import React from "react";
 //project files
 import Checkbox from "./Checkbox";
-import { useList } from "../context/ContextHook";
+import { useList } from "../../context/list/ContextHook";
 
 export default function Task({ task }) {
   //constants
@@ -10,7 +10,7 @@ export default function Task({ task }) {
   const { name, price, isCheckedOff, id } = task;
   //functions
   return (
-    <article className="list-item">
+    <article className="task">
       <Checkbox
         checked={isCheckedOff}
         onChange={() =>
@@ -20,7 +20,7 @@ export default function Task({ task }) {
           })
         }
       />
-      <div className="item-details">
+      <div className="task-details">
         <span className="name"> {name}</span>
         <span className="price"> {price} SEK</span>
       </div>

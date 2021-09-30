@@ -42,11 +42,9 @@ The goal of this project was to build a simple single page application to enable
 The UI component tree allows to visualize the different parts of the application.
 <br/>
 
-![UI component tree](./public/planning/ui-components.png)
+![UI component tree]()
 <br/>
 
-The `Item` and `ItemForm` components can been seen in more detail below.
-<br/>
 
 ![Item Component]()
 <br/>

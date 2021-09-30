@@ -1,7 +1,4 @@
-@import '../_abstracts/_variables';
-@import '../_abstracts/_mixins';
-
-.item {
+.task {
 	display: grid;
 	grid-template-columns: min-content 1fr min-content;
 	font-size: 0.75rem;
@@ -13,9 +10,9 @@
 	justify-content: center;
 	align-items: center;
 	grid-template-areas:
-		'checkbox details image'
-		'checkbox details image'
-		'checkbox quantity optionals';
+		'checkbox details'
+		'checkbox details'
+		'checkbox optionals';
 	img {
 		width: 3.7rem;
 		height: 3.5rem;
@@ -32,14 +29,14 @@
 		}
 	}
 }
-.item-details {
+.task-details {
 	overflow-wrap: break-word;
 	margin: auto;
 	padding: 0 0.7rem;
 	display: block;
 	grid-area: details;
-}
-.itemName {
+
+.name {
 	color: $black;
 	font-size: $default-font-size;
 	line-height: 1.5;
@@ -49,26 +46,17 @@
 	text-align: center;
 }
 
-.itemPrice {
-	font-size: 1.2rem;
-	font-weight: bold;
+.price {
+	font-size: 1rem;
 	line-height: 1;
-	color: $black;
+	color: $dark-gray;
 	display: block;
 	padding: 0.5rem;
 	text-align: center;
-}
+}}
 
 .bin-wrapper {
 	grid-area: optionals;
-	text-align: center;
-}
-.itemQuantity {
-	color: $dark-gray;
-	grid-area: quantity;
-	margin: auto;
-	padding: 0rem;
-	align-content: flex-start;
 	text-align: center;
 }
 
