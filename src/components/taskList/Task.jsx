@@ -7,7 +7,7 @@ import { useList } from "../../context/list/ContextHook";
 export default function Task({ task }) {
   //constants
   const { dispatch } = useList();
-  const { name, price, isCheckedOff, id } = task;
+  const { name, price, isCheckedOff } = task;
   //functions
   return (
     <article className="task">

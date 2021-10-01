@@ -247,7 +247,7 @@ footer {
   font-weight: 700;
   font-size: 0.75rem;
 }
-.btn-sort label input[type=checkbox] {
+.btn-sort label input[type=""] {
   display: none;
 }
 
