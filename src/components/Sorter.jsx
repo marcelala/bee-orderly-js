@@ -10,7 +10,9 @@ export default function Sorter() {
   const [activeSorter, setActiveSorter] = useState("");
   //methods
   function sortListByName() {
-    return list.slice().sort((a, b) => a.name.localeCompare(b.name, "sv"));
+    return list
+      .slice()
+      .sort((a, b) => a.taskName.localeCompare(b.taskName, "sv"));
   }
   function sortListByPrice() {
     return list.slice().sort((a, b) => a.price - b.price);

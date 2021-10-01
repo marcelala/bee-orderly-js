@@ -4,7 +4,7 @@ import InputField from "./InputField";
 import { validateForm } from "./FormValidation";
 import { useList } from "../../context/list/ContextHook";
 
-const emptyForm = { name: "", price: "" };
+const emptyForm = { taskName: "", price: "" };
 
 export default function TaskCreatorForm({ setToggleForm }) {
   const { dispatch } = useList();
@@ -22,19 +22,19 @@ export default function TaskCreatorForm({ setToggleForm }) {
   };
   function handleSubmit(event) {
     event.preventDefault();
-    //if (isValid) {
-    dispatch({
-      type: "UPDATE_LIST",
-      payload: {
-        id: Date.now(),
-        name: input.name.toUpperCase().trim(),
-        price: input.price.toString(),
-        isCheckedOff: false,
-      },
-    });
-    setInput(emptyForm);
-    setToggleForm();
-    // }
+    if (isValid) {
+      dispatch({
+        type: "UPDATE_LIST",
+        payload: {
+          id: Date.now(),
+          taskName: input.taskName.toUpperCase().trim(),
+          price: input.price.toString(),
+          isCheckedOff: false,
+        },
+      });
+      setInput(emptyForm);
+      setToggleForm();
+    }
   }
   return (
     <form onSubmit={handleSubmit} className="taskCreator-form">
@@ -43,10 +43,10 @@ export default function TaskCreatorForm({ setToggleForm }) {
           Item
           <InputField
             type={"text"}
-            value={input.name}
+            value={input.taskName}
             placeholder={"e.g. DIHULT"}
             onChange={handleChange}
-            id="name"
+            id="taskName"
           />
         </label>
         <label htmlFor="inputPrice" title="Price" className="input-price">
