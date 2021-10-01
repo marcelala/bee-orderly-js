@@ -9,7 +9,7 @@ test("Should change the value of radio button", async () => {
   fireEvent.change(radioButtonElement, { target: { value: "byPrice" } });
   expect(radioButtonElement.value).toBe("byPrice");
 });
-
+//does not pass yet, working out  how to mock the function handleSorting
 test("Should call handleSorting once", async () => {
   const { getByLabelText } = render(<Sorter />);
   const radioButtonElement = getByLabelText("Price");
