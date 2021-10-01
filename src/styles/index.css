@@ -232,22 +232,38 @@ footer {
 }
 
 .btn-sort {
+  box-shadow: 0em 0.3em 0.5em 0em rgba(0, 0, 0, 0.2);
+  transition: transform 250ms ease-in-out;
+  position: relative;
   color: #0058a3;
   border-radius: 2rem;
+  box-shadow: none;
+}
+.btn-sort::after {
+  content: "";
+  position: absolute;
+  box-shadow: 0em 0em 1.25em 0em rgba(0, 0, 0, 0.4);
+  transition: transform 250ms ease-in-out;
+  opacity: 0;
+}
+.btn-sort:hover, .btn-sort:focus {
+  transform: scale(1.1);
+}
+.btn-sort:hover::after, .btn-sort:focus::after {
+  opacity: 1;
 }
 .btn-sort:hover {
-  background-color: #ccc;
+  box-shadow: none;
+  color: #efce15;
 }
 .btn-sort label {
-  border: 1px solid #0058a3;
   cursor: pointer;
   height: 100%;
-  border-radius: 1rem;
-  padding: 0.5rem 1.5rem;
+  padding: 0.5rem;
   font-weight: 700;
   font-size: 0.75rem;
 }
-.btn-sort label input[type=""] {
+.btn-sort label input[type=radio] {
   display: none;
 }
 
@@ -261,6 +277,7 @@ footer {
   position: relative;
   border: none;
   box-shadow: 0 0 0 0;
+  cursor: pointer;
 }
 .icon-button::after {
   content: "";
@@ -425,6 +442,7 @@ footer {
 }
 .list-screen .checked-off-list {
   margin: 0 auto;
+  width: 80%;
 }
 .list-screen .checked-off-list .task {
   border-bottom: 1px solid #ccc;

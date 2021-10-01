@@ -36,48 +36,23 @@ The goal of this project was to build a simple single page application to enable
 <br/>
 
 ## Project Organisation
+
+![User Flows](https://whimsical.com/another-to-do-KWrPehJuEdhqw9zdrCSCfC)
+![ Spreadsheets](https://docs.google.com/spreadsheets/d/1GV6OP5lFfKMq8MCew-0BUv4B3-WTfFO8eHU4tGssnKg/edit?usp=sharing)
+
 <br/>
 
 ### Component tree
 The UI component tree allows to visualize the different parts of the application.
 <br/>
 
-![UI component tree]()
-<br/>
+![UI component tree](https://whimsical.com/another-to-do-KWrPehJuEdhqw9zdrCSCfC)
 
 
-![Item Component]()
-<br/>
 
-![Item Form]()
+![Mock up](https://www.figma.com/file/t4BLSc8jsTSDOVRg1Xn7iQ/Another-to-do?node-id=1:7)
 <br/>
-<br/>
-
 -----
-
-<br/>
-
-### Hierarchy diagram
-<br/>
-
-This diagram was drawn to make it easier to comprehend the relationships between the components and the global state.
-<br/>
-<br/>
-
-![Hierarchy Diagram]()
-
-<br/>
-
-The global state was managed in this appication by React's Context API and useReducer hook. the diagram below displays the reducer methods.
-
-<br/>
-
-![State Management]()
-
-<br/>
-
-----
-----
 
 <br/>
 
@@ -90,7 +65,7 @@ To run the project in the **development mode**, follow the instructions below:
 Download or clone the repository in your computer:
 
 ```
-$ git clone https://github.com/marcelala/shopping-list.git
+$ git clone https://github.com/marcelala/bee-orderly-js.git
 ```
 
 In the repository folder:
@@ -128,7 +103,7 @@ npm run build
 
 - As a project generated with `create-react-app`, it includes React and ReactDOM as dependencies. It also includes a set of scripts used by Create React App as a development dependency.
 - The project setup also uses [Webpack](https://webpack.js.org/) for handling all assets, as Webpack offers a custom way of “extending” the concept of `import` beyond JavaScript.
-- [SASS](https://github.com/sass/sass) Sassy CSS for styling
+- [node-sass](https://github.com/sass/node-sass) Sassy CSS for styling
 - [Firebase](https://firebase.google.com/) for hosting the application.
 
 <br/>

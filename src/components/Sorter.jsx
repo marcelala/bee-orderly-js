@@ -24,7 +24,6 @@ export default function Sorter() {
   function handleSorting(e) {
     setActiveSorter(e.target.value);
     const sortedList = sortList(e.target.value);
-    console.log(sortedList);
     dispatch({ type: "SET_LIST", payload: sortedList });
   }
   return (
