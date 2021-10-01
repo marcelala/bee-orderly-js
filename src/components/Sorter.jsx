@@ -5,26 +5,26 @@ import { useList } from "../context/list/ContextHook";
 
 export default function Sorter() {
   //global state
-  const { dispatch, list } = useList();
+  const { list, dispatch } = useList();
   //local state
-  const unsorted = [{ byName: false }, { byPrice: false }];
-  const [activeSorter, setActiveSorter] = useState(unsorted);
+  const [activeSorter, setActiveSorter] = useState("");
   //methods
-  function selectSorter(id, checked) {
-    const sorterSelected = { [id]: checked };
-    setActiveSorter(sorterSelected);
+  function sortListByName() {
+    return list
+      .slice()
+      .sort((a, b) => a.taskName.localeCompare(b.taskName, "sv"));
   }
-  function handleSortingByName() {
-    selectSorter("byName", activeSorter.byName);
-    const sortedByName = list.sort((a, b) =>
-      a.name.localeCompare(b.name, "sv")
-    );
-    dispatch({ type: "SET_LIST", payload: sortedByName });
+  function sortListByPrice() {
+    return list.slice().sort((a, b) => a.price - b.price);
   }
-  function handleSortingByPrice() {
-    selectSorter("byPrice", activeSorter.byPrice);
-    const sortedByPrice = list.sort((a, b) => a.price - b.price);
-    dispatch({ type: "SET_LIST", payload: sortedByPrice });
+  function sortList(type) {
+    if (type === "byName") return sortListByName();
+    else if (type === "byPrice") return sortListByPrice();
+  }
+  function handleSorting(e) {
+    setActiveSorter(e.target.value);
+    const sortedList = sortList(e.target.value);
+    dispatch({ type: "SET_LIST", payload: sortedList });
   }
   return (
     <section className="sorter">
@@ -33,9 +33,10 @@ export default function Sorter() {
         <label htmlFor="byName">
           <input
             id="byName"
-            type="checkbox"
-            checked={(activeSorter.byName = true)}
-            onChange={() => handleSortingByName()}
+            type="radio"
+            value={"byName"}
+            checked={activeSorter === "byName"}
+            onChange={handleSorting}
           />
           A→Z
         </label>
@@ -44,9 +45,10 @@ export default function Sorter() {
         <label htmlFor="byPrice">
           <input
             id="byPrice"
-            type="checkbox"
-            checked={(activeSorter.byPrice = true)}
-            onChange={() => handleSortingByPrice()}
+            type="radio"
+            value={"byPrice"}
+            checked={activeSorter === "byPrice"}
+            onChange={handleSorting}
           />
           Price
         </label>

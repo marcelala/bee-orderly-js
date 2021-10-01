@@ -7,7 +7,7 @@ import { useList } from "../../context/list/ContextHook";
 export default function Task({ task }) {
   //constants
   const { dispatch } = useList();
-  const { name, price, isCheckedOff, id } = task;
+  const { taskName, price, isCheckedOff } = task;
   //functions
   return (
     <article className="task">
@@ -21,7 +21,7 @@ export default function Task({ task }) {
         }
       />
       <div className="task-details">
-        <span className="name"> {name}</span>
+        <span className="name"> {taskName}</span>
         <span className="price"> {price} SEK</span>
       </div>
     </article>

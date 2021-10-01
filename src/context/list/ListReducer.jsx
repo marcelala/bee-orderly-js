@@ -1,9 +1,8 @@
 import { SET_LIST, UPDATE_LIST, UPDATE_TASK } from "./ListActions";
-
 export default function ListReducer(list, action) {
   switch (action.type) {
     case SET_LIST:
-      return [...list];
+      return [...action.payload];
     case UPDATE_LIST:
       return [action.payload, ...list];
     case UPDATE_TASK:

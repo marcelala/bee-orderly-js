@@ -10,9 +10,12 @@ import Sorter from "../components/Sorter";
 export default function ListScreen() {
   //global state
   const { list } = useList();
+  const clonedList = [...list];
   const [toggleList, setToggleList] = useState(false);
-  const pendingTasks = list.filter((task) => task.isCheckedOff === false);
-  const checkedOffItems = list.filter((task) => task.isCheckedOff === true);
+  const pendingTasks = clonedList.filter((task) => task.isCheckedOff === false);
+  const checkedOffItems = clonedList.filter(
+    (task) => task.isCheckedOff === true
+  );
   return (
     <section className="list-screen">
       <div className="text-box">
