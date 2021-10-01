@@ -3,11 +3,12 @@
 ## Overview
 
 EIKA is a React.js single page web application where users can input an item's information and add it to their shopping list.
-The app can be visited by clicking [here](https://react-list-eika.web.app/).\
+The app can be visited by clicking [here](https://bee-orderly.web.app/).
+
 <br/>
 
 ---
----
+
 <br/>
 
 ## Table of Contents
@@ -19,39 +20,58 @@ The app can be visited by clicking [here](https://react-list-eika.web.app/).\
 - [How to run the project](#how-to-run-the-project)
 - [Dependencies](#dependencies-&-tools-used)
 - [Attributions](#attributions-&-helpful-links)
+
   <br/>
 
 ---
----
+
 <br/>
 
 ## Specification
 <br/>
 
-The goal of this project was to build a simple single page application to enable the user to create a shopping-list using React.
+The goal of this project was to build a simple single page application to enable the user to create a shopping-list.
+
 <br/>
 
----
 ---
 <br/>
 
 ## Project Organisation
 
-![User Flows](https://whimsical.com/another-to-do-KWrPehJuEdhqw9zdrCSCfC)
-![ Spreadsheets](https://docs.google.com/spreadsheets/d/1GV6OP5lFfKMq8MCew-0BUv4B3-WTfFO8eHU4tGssnKg/edit?usp=sharing)
+<br/>
+
+
+### Project analysis
+
+[Spreadsheet](https://docs.google.com/spreadsheets/d/1GV6OP5lFfKMq8MCew-0BUv4B3-WTfFO8eHU4tGssnKg/edit?usp=sharing)
+
 
 <br/>
 
-### Component tree
-The UI component tree allows to visualize the different parts of the application.
+### User Flows
+
+
+[User Flows](https://whimsical.com/another-to-do-KWrPehJuEdhqw9zdrCSCfC)
+
 <br/>
 
-![UI component tree](https://whimsical.com/another-to-do-KWrPehJuEdhqw9zdrCSCfC)
 
-
-
-![Mock up](https://www.figma.com/file/t4BLSc8jsTSDOVRg1Xn7iQ/Another-to-do?node-id=1:7)
+###Component tree
 <br/>
+
+[UI component tree](https://whimsical.com/another-to-do-KWrPehJuEdhqw9zdrCSCfC)
+
+<br/>
+
+### Design Mockup
+<br/>
+
+[Mock up](https://www.figma.com/file/t4BLSc8jsTSDOVRg1Xn7iQ/Another-to-do?node-id=1:7)
+<br/>
+
+<br/>
+
 -----
 
 <br/>
