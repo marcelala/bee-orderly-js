@@ -29,11 +29,15 @@ export default function ListScreen() {
     <section className="list-screen">
       <div className="text-box">
         <h5>Welcome back to Bee Orderly </h5>
-
         <br />
         <p>
-          Looks like you still have {numberOfPendingTasks()}{" "}
-          {numberOfPendingTasks() === 1 ? "task" : "tasks"} left on your list
+          Looks like you still have{" "}
+          <b>
+            {" "}
+            {numberOfPendingTasks()}{" "}
+            {numberOfPendingTasks() === 1 ? "task" : "tasks"}{" "}
+          </b>{" "}
+          left on your list
         </p>
       </div>
       <img
