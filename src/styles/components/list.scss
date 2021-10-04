@@ -9,6 +9,7 @@
 	display: grid;
 	row-gap: $space-medium;
 	grid-template-areas:
+					"image"
 	"text"
 	"taskCreator"
 	"sorter"
@@ -25,12 +26,20 @@
 
 		h5 {
 			font-weight: 700;
-			color: $ikea-blue;
+			color: $primary;
 			font-size: $small-font-size;
 		}
 		p{
 			color: gray;
 		}
+	}
+
+	.hero-media {
+		object-fit: cover;
+		max-height: 22rem;
+		height: 100%;
+		width: 9rem;
+		grid-area: image;
 	}
 
 	.taskCreator {
@@ -54,6 +63,11 @@
 		grid-area: checkedOffList;
 	}
 
+	.taskList{
+		row-gap: $space-medium;
+		display: grid;
+	}
+
 	.pending-list {
 		margin: 0 auto;
 		width: 80%;
@@ -63,7 +77,7 @@
 		margin: 0 auto;
 		width: 80%;
 		.task {
-			border-bottom: 1px solid $light-gray;
+			border-bottom: 1px solid $light;
 
 			.name, .price {
 				color: gray;
@@ -71,8 +85,8 @@
 		}
 
 		.status {
-			opacity: 0.6;
-			filter: invert(40%) sepia(90%) saturate(995%) hue-rotate(343deg) brightness(160%) contrast(97%);
+			opacity: 0.4;
+			//filter: invert(0%) sepia(113%) saturate(904%) hue-rotate(212deg) brightness(140%) contrast(86%);
 		}
 	}
 }

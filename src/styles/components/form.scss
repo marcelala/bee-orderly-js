@@ -25,7 +25,7 @@
 		font-size: $tiny-font-size;
 		padding: 0rem 1.3rem;
 		margin-bottom: 0.3rem;
-		color: $ikea-blue;
+		color: $primary;
 	}
 	h2 {
 		font-size: $small-font-size;
@@ -35,17 +35,19 @@
 		font-weight: 300;
 	}
 	& input {
-		background-color: $neutral-gray;
+		background-color: $white;
 		border: 2px solid transparent;
 		border-radius: 40em;
 		outline: 0;
 		font-size: 1.2rem;
 		padding: $space-small $space-medium;
 		margin-top: $space-small;
+		color: $primary;
+
 		&:focus {
-			background-color: $white;
-			border-color: $ikea-blue;
-			color: $dark-gray;
+			background-color: $light;
+			border-color: $primary;
+			color: $primary-light;
 			transition: transform 350ms ease-in-out;
 		}
 	}
@@ -55,8 +57,8 @@
 		justify-self: center;
 	}
 	label{
-		color: $dark-gray;
-		font-weight: $bold;
+		color: gray;
+		font-weight: 500;
 		font-size: $small-font-size;
 		display: inline-flex;
 		flex-direction: column;

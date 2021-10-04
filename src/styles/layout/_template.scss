@@ -2,6 +2,7 @@
 .App {
 	display: grid;
 	grid: auto-flow min-content / 1fr;
+	background-color: $light;
 	grid-gap: 1rem;
 	justify-content: center;
 	align-content: center;
@@ -21,7 +22,7 @@ header {
 footer {
 	grid-area: footer;
 	font-weight: normal;
-	color: $dark-gray;
+	color: $primary-light;
 	margin-top: 2rem;
 }
 

@@ -50,7 +50,7 @@ export default function Sorter() {
             checked={activeSorter === "byPrice"}
             onChange={handleSorting}
           />
-          Price
+          Date
         </label>
       </div>
     </section>
