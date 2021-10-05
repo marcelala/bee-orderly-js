@@ -1,8 +1,8 @@
-# EIKA- React Shopping List
+# Bee Orderly JS: To-do List
 
 ## Overview
 
-EIKA is a React.js single page web application where users can input an item's information and add it to their shopping list.
+Bee Orderly is a React.js single page web application where users can input a task's information and add it to their to-do list.
 The app can be visited by clicking [here](https://bee-orderly.web.app/).
 
 <br/>

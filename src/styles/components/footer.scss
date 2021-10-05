@@ -1,0 +1,19 @@
+footer {
+  font-weight: normal;
+  color: $primary-light;
+  margin-top: 2rem;
+  bottom: 0;
+  .icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+  img {
+    margin: 0.5rem;
+    cursor: pointer;
+    width: 1.8rem;
+    height: auto;
+    @include hover-lift;
+    box-shadow: none;
+  }}

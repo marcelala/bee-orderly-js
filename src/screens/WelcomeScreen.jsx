@@ -1,7 +1,7 @@
 import React from "react";
-import TaskCreator from "../components/taskCreator/TaskCreator";
 //project files
 import HeroMedia from "./../assets/images/hero-img.png";
+import TaskCreator from "../components/taskCreator/TaskCreator";
 
 export default function WelcomeScreen() {
   return (
@@ -14,13 +14,12 @@ export default function WelcomeScreen() {
       <div className="welcome-wrapper">
         <h3> Welcome! We’re so glad you’re here! </h3>
         <h4>
-          You can use our shopping list to help you plan before you visit us.
-          This way you won't forget anything when you come.
+          You can use our to-do list to help you plan and get organised. This
+          way you won't forget anything.
         </h4>
         <h4>
-          Just press the button below and fill up the form with the item's name
-          and price to get started. You can also add the quantity if you would
-          like.
+          Just press the button below and fill up the form with the task's name
+          and notes, if any, to get started.
         </h4>
       </div>
       <TaskCreator />

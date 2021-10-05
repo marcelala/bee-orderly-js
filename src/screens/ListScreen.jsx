@@ -1,16 +1,17 @@
 //npm packages
 import React, { useState } from "react";
 //projectFiles
-import TaskCreator from "../components/taskCreator/TaskCreator";
 import TaskList from "../components/taskList/TaskList";
 import ButtonToggleList from "../components/ButtonToggleList";
 import { useList } from "../context/list/ContextHook";
 import Sorter from "../components/Sorter";
 import HeroMedia from "../assets/images/hero-img.png";
+import Button from "../components/Button";
+import TaskCreator from "../components/taskCreator/TaskCreator";
 
 export default function ListScreen() {
   //global state
-  const { list } = useList();
+  const { list, dispatch } = useList();
   const clonedList = [...list];
   const [toggleList, setToggleList] = useState(false);
   const pendingTasks = clonedList.filter((task) => task.isCheckedOff === false);
@@ -28,7 +29,7 @@ export default function ListScreen() {
   return (
     <section className="list-screen">
       <div className="text-box">
-        <h5>Welcome back to Bee Orderly </h5>
+        <h3>Welcome back!</h3>
         <br />
         <p>
           Looks like you still have{" "}
@@ -37,7 +38,7 @@ export default function ListScreen() {
             {numberOfPendingTasks()}{" "}
             {numberOfPendingTasks() === 1 ? "task" : "tasks"}{" "}
           </b>{" "}
-          left on your list
+          left on your to-do list.
         </p>
       </div>
       <img
@@ -46,6 +47,7 @@ export default function ListScreen() {
         alt="beehive illustration with a few bees flying around it"
       />
       <TaskCreator />
+
       <Sorter />
       <div className="pending-list">
         <TaskList items={pendingTasks} />
@@ -59,6 +61,12 @@ export default function ListScreen() {
           <TaskList items={checkedOffItems} />
         </div>
       )}
+      <Button
+        theme={"secondary"}
+        onClick={() => dispatch({ type: "SET_LIST", payload: [] })}
+      >
+        Clear list
+      </Button>
     </section>
   );
 }

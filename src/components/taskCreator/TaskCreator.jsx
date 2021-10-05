@@ -1,13 +1,18 @@
 import React, { useState } from "react";
 //project files
 import TaskCreatorForm from "./TaskCreatorForm";
-import TaskCreatorButton from "./TaskCreatorButton";
+import Button from "../Button";
 
 export default function TaskCreator() {
   const [toggleForm, setToggleForm] = useState(false);
   return (
     <div className="taskCreator">
-      <TaskCreatorButton onClick={() => setToggleForm(!toggleForm)} />
+      <Button
+        onClick={() => setToggleForm(!toggleForm)}
+        theme={"btn-taskCreator"}
+      >
+        Add a task
+      </Button>
       {toggleForm && (
         <TaskCreatorForm setToggleForm={() => setToggleForm(!toggleForm)} />
       )}

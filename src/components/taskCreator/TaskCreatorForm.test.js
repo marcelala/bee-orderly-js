@@ -10,14 +10,17 @@ test("rendering and submitting a basic Formik form", async () => {
       <TaskCreatorForm onSubmit={mockSubmit} />
     </ListContextProvider>
   );
-  userEvent.type(screen.getByPlaceholderText(/e.g. DIHULT/i), "flisat");
-  userEvent.type(screen.getByPlaceholderText(/e.g. 399/i), "2000");
+  userEvent.type(screen.getByPlaceholderText(/e.g. Tidy/i), "clean");
+  userEvent.type(
+    screen.getByPlaceholderText(/e.g. Finish today/i),
+    "due tomorrow"
+  );
   const buttonElement = screen.getByText(/Submit/);
   fireEvent.click(buttonElement);
   await waitFor(() =>
     expect(mockSubmit).toHaveBeenCalledWith({
-      taskName: "flisat",
-      price: "2000",
+      taskName: "clean",
+      notes: "due tomorrow",
     })
   );
 });
