@@ -14,16 +14,15 @@
 		grid-area: title;
 		color: $primary;
 		font-weight: 500;
-
 	}
-	.byName{
+	.byName label{
 		grid-area: byName;
-		font-size: 2rem;
+		font-size: 1.5rem;
 		font-weight: 500;
 	}
-	.byPrice{
+	.byPrice label{
 		grid-area: byPrice;
-		font-size: 2rem;
+		font-size: 1.5rem;
 		vertical-align: center;
 		margin: auto 0;
 		font-weight: 500;

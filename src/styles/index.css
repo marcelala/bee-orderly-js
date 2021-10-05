@@ -327,7 +327,7 @@ footer {
 }
 .taskCreator-form input {
   background-color: #fff;
-  border: 2px solid transparent;
+  border: 2px solid #c5bef3;
   border-radius: 40em;
   outline: 0;
   font-size: 1.2rem;
@@ -338,7 +338,7 @@ footer {
 .taskCreator-form input:focus {
   background-color: #F7FAFE;
   border-color: #8883F0;
-  color: #c5bef3;
+  color: #8883F0;
   transition: transform 350ms ease-in-out;
 }
 .taskCreator-form .btn-form {
@@ -376,14 +376,14 @@ footer {
   color: #8883F0;
   font-weight: 500;
 }
-.sorter .byName {
+.sorter .byName label {
   grid-area: byName;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 500;
 }
-.sorter .byPrice {
+.sorter .byPrice label {
   grid-area: byPrice;
-  font-size: 2rem;
+  font-size: 1.5rem;
   vertical-align: center;
   margin: auto 0;
   font-weight: 500;
@@ -455,14 +455,12 @@ footer {
 .list-screen .checked-off-list .task .name, .list-screen .checked-off-list .task .price {
   color: gray;
 }
-.list-screen .checked-off-list .status {
-  opacity: 0.4;
-}
 
 .task {
   display: grid;
+  margin: auto 0;
   background-color: #fff;
-  grid-template-columns: min-content 1fr min-content;
+  grid-template-columns: min-content 1fr;
   font-size: 0.75rem;
   opacity: 1;
   width: 100%;
@@ -472,7 +470,56 @@ footer {
   border-radius: 1rem;
   justify-content: center;
   align-items: center;
-  grid-template-areas: "checkbox details" "checkbox details";
+  justify-items: center;
+  grid-template-areas: "checkbox details";
+}
+
+.checkbox-wrapper {
+  grid-area: checkbox;
+  display: inline-block;
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+  transition: all 150ms;
+  vertical-align: middle;
+}
+.checkbox-wrapper label {
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  width: 1.75rem;
+  height: 1.75rem;
+  border: 1px solid #8883F0;
+  background-color: #F7FAFE;
+  opacity: 0.7;
+  z-index: 100;
+}
+.checkbox-wrapper label:after {
+  border-radius: 50%;
+  border: 1px solid #c5bef3;
+  border-top: none;
+  border-right: none;
+  content: "";
+  position: absolute;
+  transform: rotate(-45deg);
+  opacity: 1;
+}
+.checkbox-wrapper input[type=checkbox] {
+  appearance: none;
+  transition: box-shadow 0.3s;
+  border: 2px solid #c5bef3;
+  border-radius: 50%;
+  cursor: pointer;
+  overflow: hidden;
+  position: absolute;
+  margin: -1px -14px;
+  background-color: transparent;
+}
+.checkbox-wrapper input[type=checkbox] :checked {
+  box-shadow: inset 0 0 0 20px white;
+}
+.checkbox-wrapper input[type=checkbox] :checked, .checkbox-wrapper label:after {
+  opacity: 1;
 }
 
 .task-details {
@@ -504,55 +551,6 @@ footer {
   grid-area: optionals;
   text-align: center;
   display: inline-block;
-}
-
-.checkbox-wrapper {
-  grid-area: checkbox;
-  margin: 0 auto;
-  position: relative;
-  text-align: center;
-  transition: all 150ms;
-  vertical-align: middle;
-}
-.checkbox-wrapper label {
-  border-radius: 50%;
-  cursor: pointer;
-  position: absolute;
-  width: 1.75rem;
-  height: 1.75rem;
-  border: 1px solid #8883F0;
-  background-color: #c5bef3;
-  opacity: 0.2;
-  z-index: 100;
-}
-.checkbox-wrapper label:after {
-  border-radius: 50%;
-  border: 4px solid #c5bef3;
-  border-top: none;
-  border-right: none;
-  content: "";
-  position: absolute;
-  transform: rotate(-45deg);
-  opacity: 1;
-}
-.checkbox-wrapper input[type=checkbox] {
-  appearance: none;
-  transition: box-shadow 0.3s;
-  border: 4px solid #c5bef3;
-  border-radius: 50%;
-  cursor: pointer;
-  overflow: hidden;
-  position: absolute;
-  width: 1.75rem;
-  height: 1.75rem;
-  margin: -1px -14px;
-  background-color: transparent;
-}
-.checkbox-wrapper input[type=checkbox] :checked {
-  box-shadow: inset 0 0 0 20px white;
-}
-.checkbox-wrapper input[type=checkbox] :checked, .checkbox-wrapper label:after {
-  opacity: 1;
 }
 
 /*# sourceMappingURL=index.css.map */

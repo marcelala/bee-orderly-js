@@ -36,7 +36,7 @@
 	}
 	& input {
 		background-color: $white;
-		border: 2px solid transparent;
+		border: 2px solid $primary-light;
 		border-radius: 40em;
 		outline: 0;
 		font-size: 1.2rem;
@@ -44,10 +44,11 @@
 		margin-top: $space-small;
 		color: $primary;
 
+
 		&:focus {
 			background-color: $light;
 			border-color: $primary;
-			color: $primary-light;
+			color: $primary;
 			transition: transform 350ms ease-in-out;
 		}
 	}
