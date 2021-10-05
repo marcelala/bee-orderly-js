@@ -29,7 +29,7 @@ export default function ListScreen() {
   return (
     <section className="list-screen">
       <div className="text-box">
-        <h3>Welcome back to Bee Orderly </h3>
+        <h3>Welcome back!</h3>
         <br />
         <p>
           Looks like you still have{" "}
@@ -38,7 +38,7 @@ export default function ListScreen() {
             {numberOfPendingTasks()}{" "}
             {numberOfPendingTasks() === 1 ? "task" : "tasks"}{" "}
           </b>{" "}
-          left on your list
+          left on your to-do list.
         </p>
       </div>
       <img
@@ -47,12 +47,7 @@ export default function ListScreen() {
         alt="beehive illustration with a few bees flying around it"
       />
       <TaskCreator />
-      <Button
-        theme={"secondary"}
-        onClick={() => dispatch({ type: "SET_LIST", payload: [] })}
-      >
-        Clear list
-      </Button>
+
       <Sorter />
       <div className="pending-list">
         <TaskList items={pendingTasks} />
@@ -66,6 +61,12 @@ export default function ListScreen() {
           <TaskList items={checkedOffItems} />
         </div>
       )}
+      <Button
+        theme={"secondary"}
+        onClick={() => dispatch({ type: "SET_LIST", payload: [] })}
+      >
+        Clear list
+      </Button>
     </section>
   );
 }

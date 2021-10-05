@@ -3,16 +3,15 @@
 	margin: auto 0;
 	background-color: $white;
 	grid-template-columns: min-content 1fr;
-	column-gap: .3rem;
+	column-gap: $space-small;
 	opacity: 1;
 	width: 100%;
 	transition: opacity 0.8s, max-height 0s;
-	padding: 0.7rem $space-medium;
+	padding: $space-small;
 	border-bottom: 1px solid $primary-light;
 	border-radius: $space-small;
 	justify-content: center;
 	align-items: center;
-	justify-items: center;
 	grid-template-areas:
 		"checkbox details";
 }
@@ -20,8 +19,8 @@
 .checkbox-label {
 	grid-area: checkbox;
 	cursor: pointer;
-	height: 2rem;
-	width: 2rem;
+	height: 1.5rem;
+	width:  1.5rem;
 	input[type='checkbox'] {
 		appearance: none;
 		transition: box-shadow .3s;
@@ -49,7 +48,7 @@
 	overflow-wrap: break-word;
 	display: block;
 	grid-area: details;
-	padding: $space-x-small 0;
+	padding: 0;
 
 .name {
 	font-size: 1.2rem;
@@ -64,10 +63,10 @@
 
 .notes {
 	font-size: .8rem;
-	line-height: 1;
+	line-height: .8rem;
 	color: $primary-light;
 	display: block;
-	padding: 0.5rem;
+	padding-top: 0.5rem;
 	width: 100%;
 	text-align: left;
 }}

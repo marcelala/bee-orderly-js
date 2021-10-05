@@ -20,13 +20,13 @@
 	.text-box {
 		grid-area: text;
 		margin: 0 auto;
-		padding: $space-small;
+		padding: 0;
 		width: 100%;
 		text-align: center;
 
 		h3 {
 			font-weight: 500;
-			color: $primary-light;
+			color: $primary;
 			font-size: $default-font-size;
 		}
 		p{
@@ -38,8 +38,9 @@
 		object-fit: cover;
 		max-height: 22rem;
 		height: 100%;
-		width: 9rem;
+		width: 7rem;
 		grid-area: image;
+		padding: 1rem 0;
 	}
 
 	.taskCreator {

@@ -18,7 +18,7 @@ export default function InputField({
       placeholder={placeholder}
       id={id}
       data-testid="input"
-      maxLength="30"
+      maxLength="20"
       required={required}
     />
   );
