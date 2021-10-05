@@ -82,6 +82,10 @@
 			.name, .price {
 				color: gray;
 			}
+			.name{
+				text-decoration: line-through;
+
+			}
 		}
 	}
 }

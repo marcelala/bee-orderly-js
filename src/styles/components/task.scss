@@ -16,58 +16,32 @@
 	grid-template-areas:
 		"checkbox details";
 }
-.checkbox-wrapper {
+
+.checkbox-label {
 	grid-area: checkbox;
-	display: inline-block;
-	margin: 0 auto;
-	position: relative;
-	text-align: center;
-	transition: all 150ms;
-	vertical-align: middle;
-	label {
-		border-radius: 50%;
-		cursor: pointer;
-		position: absolute;
-		width: 1.75rem;
-		height: 1.75rem;
-		border: 1px solid $primary;
-		background-color: $light;
-		opacity: 0.7;
-		z-index: 100;
-
-		&:after {
-			border-radius: 50%;
-			border: 1px solid $primary-light;
-			border-top: none;
-			border-right: none;
-			content: "";
-			position: absolute;
-			transform: rotate(-45deg);
-			opacity: 1;
-		}
-	}
-
+	cursor: pointer;
+	height: 2rem;
+	width: 2rem;
 	input[type='checkbox'] {
 		appearance: none;
-		//filter: invert(53%) sepia(43%) saturate(904%) hue-rotate(212deg) brightness(140%) contrast(86%);
 		transition: box-shadow .3s;
-		border: 2px solid $primary-light;
-		border-radius: 50%;
-		cursor:pointer;
-		overflow: hidden;
 		position: absolute;
-		//width: 1.75rem;
-		//height: 1.75rem;
-		margin: -1px -14px;
-		background-color: transparent;
-
+		cursor: cell;
+		height: 2rem;
+		width: 2rem;
 	}
-	input[type='checkbox'] :checked {
-		box-shadow: inset 0 0 0 20px white;
-
-	}
-	input[type='checkbox'] :checked, label:after {
-		opacity: 1;
+	.checkmark{
+		width: 100%;
+		height: 100%;
+		background-color: $white;
+		border-radius: 50%;
+		border: 1px solid $primary-light;
+		&.checked{
+			background-color: $primary-light;
+			background-image: url("/src/assets/images/checkmark.svg");
+			background-repeat: no-repeat;
+			background-position: center;
+		}
 	}
 }
 

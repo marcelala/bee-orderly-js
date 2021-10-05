@@ -1,14 +1,13 @@
 export default function Checkbox({ checked, onChange }) {
   return (
-    <div className="checkbox-wrapper">
-      <label htmlFor="checkbox">
-        <input
-          type="checkbox"
-          data-testid="checkbox"
-          checked={checked}
-          onChange={onChange}
-        />
-      </label>
-    </div>
+    <label htmlFor="checkbox" className="checkbox-label">
+      <input
+        type="checkbox"
+        data-testid="checkbox"
+        checked={checked}
+        onChange={onChange}
+      />
+      <div className={`checkmark ${checked && "checked"}`}></div>
+    </label>
   );
 }

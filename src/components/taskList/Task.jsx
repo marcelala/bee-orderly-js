@@ -22,7 +22,7 @@ export default function Task({ task }) {
       />
       <div className="task-details">
         <span className="name"> {taskName}</span>
-        <span className="price"> {price} SEK</span>
+        <span className="price"> {price}</span>
       </div>
     </article>
   );
