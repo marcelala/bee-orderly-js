@@ -27,7 +27,7 @@ test("Should show the welcome screen if the list is empty", () => {
       <App />
     </ListContextProvider>
   );
-  const textElement = screen.getByText(/EIKA's shopping list/i);
+  const textElement = screen.getByText(/Bee Orderly/i);
   expect(textElement).toBeInTheDocument();
 });
 
@@ -36,7 +36,7 @@ test("Should show the list screen if the list is not empty", () => {
   const mockTask = {
     id: 0,
     name: "Flisat",
-    price: 1220,
+    notes: 1220,
     isCheckedOff: false,
   };
   const mockData = [{ mockTask }];

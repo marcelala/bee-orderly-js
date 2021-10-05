@@ -1,10 +1,10 @@
 //layout
 .list-screen {
-	width: 80%;
+	width: 90%;
 	@include respond(big-desktop);
 	justify-content: center;
 	justify-items: center;
-	margin: auto;
+	margin: $space-medium auto;
 	grid-area: listScreen;
 	display: grid;
 	row-gap: $space-medium;
@@ -24,10 +24,10 @@
 		width: 100%;
 		text-align: center;
 
-		h5 {
-			font-weight: 700;
-			color: $primary;
-			font-size: $small-font-size;
+		h3 {
+			font-weight: 500;
+			color: $primary-light;
+			font-size: $default-font-size;
 		}
 		p{
 			color: gray;

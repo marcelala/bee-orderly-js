@@ -10,11 +10,8 @@ const validateEmptyString = (value) => {
 
 export const validateForm = (input) => {
   const result = {};
-  if (!validateDigits(input.price)) {
-    result.price = "Item price may only contain digits";
-  }
   if (!validateEmptyString(input.taskName)) {
-    result.taskName = "Enter a valid item name.";
+    result.taskName = "Task name cannot be empty";
   }
   return result;
 };

@@ -14,12 +14,12 @@ export default function Sorter() {
       .slice()
       .sort((a, b) => a.taskName.localeCompare(b.taskName, "sv"));
   }
-  function sortListByPrice() {
-    return list.slice().sort((a, b) => a.price - b.price);
+  function sortListByDate() {
+    return list.slice().sort((a, b) => b.id - a.id);
   }
   function sortList(type) {
     if (type === "byName") return sortListByName();
-    else if (type === "byPrice") return sortListByPrice();
+    else if (type === "byDate") return sortListByDate();
   }
   function handleSorting(e) {
     setActiveSorter(e.target.value);
@@ -42,15 +42,15 @@ export default function Sorter() {
         </label>
       </div>
       <div className="btn-sort byPrice">
-        <label htmlFor="byPrice">
+        <label htmlFor="byDate">
           <input
-            id="byPrice"
+            id="byDate"
             type="radio"
-            value={"byPrice"}
-            checked={activeSorter === "byPrice"}
+            value={"byDate"}
+            checked={activeSorter === "byDate"}
             onChange={handleSorting}
           />
-          Date
+          Recently added
         </label>
       </div>
     </section>

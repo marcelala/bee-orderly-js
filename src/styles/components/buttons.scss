@@ -11,13 +11,17 @@
 	justify-content: center;
 	align-items: center;
 	color: white;
+	margin: 0 auto;
 	@include hover-lift;
 	border-radius: 2rem;
+	box-shadow: none;
 }
 
-.btn-taskCreator{
-	margin: 0 auto;
-
+.secondary{
+	background-color: transparent;
+	color: $primary;
+	box-shadow: none;
+	border: 2px solid $primary-light;
 }
 
 .btn-sort {
@@ -51,8 +55,8 @@
 	cursor: pointer;
 	.icon {
 		margin-left: 0.3rem;
-		height: 2.2rem;
-		width: 2.2rem;
+		height: 1.5rem;
+		width: 1.5rem;
 		filter: invert(53%) sepia(43%) saturate(2214%) hue-rotate(212deg) brightness(100%) contrast(89%);	}
 	.bin {
 		height: 1.5rem;

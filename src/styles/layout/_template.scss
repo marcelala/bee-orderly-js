@@ -4,6 +4,7 @@
 	grid: auto-flow min-content / 1fr;
 	background-color: $light;
 	grid-gap: 1rem;
+	min-height: 100vh;
 	justify-content: center;
 	align-content: center;
 	justify-items: center;
@@ -21,9 +22,6 @@ header {
 
 footer {
 	grid-area: footer;
-	font-weight: normal;
-	color: $primary-light;
-	margin-top: 2rem;
 }
 
 .welcome {
