@@ -1,7 +1,7 @@
 import React from "react";
 import TaskCreator from "../components/taskCreator/TaskCreator";
 //project files
-import HeroMedia from "./../assets/images/alyssa-strohmann.jpg";
+import HeroMedia from "./../assets/images/hero-img.png";
 
 export default function WelcomeScreen() {
   return (
@@ -9,13 +9,9 @@ export default function WelcomeScreen() {
       <img
         src={HeroMedia}
         className="hero-media"
-        alt="bohemian house furniture and cactus"
+        alt="beehive illustration with a few bees flying around it"
       />
       <div className="welcome-wrapper">
-        <p className="attribution">
-          Photo by
-          <a href="https://unsplash.com/"> Unsplash </a>
-        </p>
         <h3> Welcome! We’re so glad you’re here! </h3>
         <h4>
           You can use our shopping list to help you plan before you visit us.

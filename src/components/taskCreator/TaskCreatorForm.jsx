@@ -11,6 +11,7 @@ export default function TaskCreatorForm({ setToggleForm }) {
   const [input, setInput] = useState(emptyForm);
   const errors = validateForm(input);
   const isValid = Object.keys(errors).length === 0;
+
   const handleChange = (e) => {
     e.persist(); //persist the event
     setInput((currentInput) => {
@@ -40,7 +41,7 @@ export default function TaskCreatorForm({ setToggleForm }) {
     <form onSubmit={handleSubmit} className="taskCreator-form">
       <div className="form">
         <label htmlFor="inputName" title="Item" className="input-name">
-          Item
+          Task
           <InputField
             type={"text"}
             value={input.taskName}
@@ -50,7 +51,7 @@ export default function TaskCreatorForm({ setToggleForm }) {
           />
         </label>
         <label htmlFor="inputPrice" title="Price" className="input-price">
-          Price
+          Costs
           <InputField
             type={"number"}
             value={input.price}

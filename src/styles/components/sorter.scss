@@ -2,7 +2,6 @@
 .sorter {
 	display: grid;
 	height: 100%;
-	align-items: center;
 	column-gap: $space-small;
 	grid-template-areas:
 	"title byName byPrice";
@@ -10,15 +9,25 @@
 	margin: 0 auto;
 	width: 100%;
 	justify-content: center;
+	align-items: baseline;
 	.sort-label {
 		grid-area: title;
-		color: $ikea-blue;
+		color: $primary;
+		font-weight: 500;
 	}
-	.byPrice{
+	.byName label{
 		grid-area: byName;
+		font-size: 1.5rem;
+		font-weight: 500;
 	}
-	.byPrice{
+	.byPrice label{
 		grid-area: byPrice;
+		font-size: 1.5rem;
+		vertical-align: center;
+		margin: auto 0;
+		font-weight: 500;
+
+
 	}
 
 }
