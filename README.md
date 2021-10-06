@@ -57,7 +57,7 @@ The goal of this project was to build a simple single page application to enable
 <br/>
 
 
-###Component tree
+### Component tree
 <br/>
 
 [UI component tree](https://whimsical.com/another-to-do-KWrPehJuEdhqw9zdrCSCfC)

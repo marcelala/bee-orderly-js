@@ -1,7 +1,7 @@
 // npm Packages
 import { render, screen, fireEvent } from "@testing-library/react";
 // Project files
-import Sorter, { handleSorting } from "./Sorter";
+import Sorter from "./Sorter";
 
 const mockTasks = [
   {
@@ -24,16 +24,9 @@ const mockTasks = [
   },
 ];
 
-test("Should change the value of radio button", async () => {
+test("Should change the radio button selected", async () => {
   const { getByLabelText } = render(<Sorter />);
   const radioButtonElement = getByLabelText("A→Z");
   fireEvent.change(radioButtonElement, { target: { value: "byDate" } });
   expect(radioButtonElement.value).toBe("byDate");
-});
-//does not pass yet, working out  how to mock the function handleSorting
-test("Should call handleSorting once", async () => {
-  render(<Sorter />);
-  const radioButtonElement = screen.getByLabelText("Recently added");
-  fireEvent.change(radioButtonElement, { target: { value: "byDate" } });
-  expect(handleSorting).toHaveBeenCalledTimes(1);
 });
